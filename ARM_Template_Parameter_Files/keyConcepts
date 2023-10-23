@@ -1,0 +1,15 @@
+<file_name>.json template file
+<file_name>.parameters.json template parameter file
+
+-Parameter names must match the template definition
+
+-Schemas are different
+
+- Support for all types supposed by ARM templates (integer, boolean, string, arrays, objects)
+
+- For secure strings, we usually will pass null because a secured string is not something we want to store in a parameter file.
+
+- However if we absolutely have to, we should use a Reference type to pass the string securely.
+    N.B : A Reference allows us to create a reference to a parameter that is stored externally.
+
+- If you pass a parameter thats defined in the file on the command line, the command line will take precedence.
